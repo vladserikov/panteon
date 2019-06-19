@@ -7,6 +7,9 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+section{
+    font-family: "Proxima Nova", sans-serif;
+}
 header{
     position: absolute;
     display: flex;
@@ -18,6 +21,7 @@ header{
     left: 50%;
     margin-left: -568px;
     color: var(--text-white, white);
+    z-index: 999999999;
 }
 header .logo{
     display: flex;
@@ -59,6 +63,10 @@ header .menu nav{
     width: 48px;
     font-size: 18px;
     position: relative;
+    transition: 0.5s;
+}
+.menu .menu-btn .menu-text:hover{
+    color: #aaa;
 }
 .menu-btn .menu-gamb,
 .menu-btn .menu-gamb:after,
@@ -66,14 +74,13 @@ header .menu nav{
     position: absolute;
     width: 47px;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--text-white, white);
 }
 .menu-btn .menu-gamb:after,
 .menu-btn .menu-gamb:before{
     content: '';
     width: 37px;
     display: block;
-    transition: 1s;
 }
 .menu-btn .menu-gamb:after{
     transform: translateY(6px);
@@ -87,7 +94,6 @@ header .menu nav{
     position: relative;
 }
 .head .head-bg{
-    /* position: absolute; */
     max-width: 1600px;
     height: 950px;
     background: url(img/header-bg.jpg) center top no-repeat #74156f;
@@ -99,3 +105,263 @@ header .menu nav{
     margin: auto;
 }
 
+.head-row{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white, white);
+}
+.head-title__top{
+    margin-top: 3rem;
+    font-size: 37px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+h1.head-title{
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 195px;
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+.head-video{
+    width: 582px;
+    height: 292px;
+    /* opacity: 0.3; */
+    position: relative;
+}
+.head-video__block{
+    width: auto;
+    height: inherit;
+    background-color: #744b7f;
+}
+.head-video__desc{
+    font-family: "Proxima Nova", sans-serif;
+    position: absolute;
+    left: 115%;
+    font-size: 14px;
+    /* top: -50%; */
+    width: 113px;
+    height: 60px;
+    color: #ffcfdf;
+    font-weight: 300;
+    margin-top: -35%;
+}
+.head-video__desc:before{
+    content: '';
+    display: block;
+    width: 200px;
+    height: 2px;
+    color: #fff;
+    position: absolute;
+    right: 100%;
+    z-index: 9999999;
+    top: 100px;
+}
+.head-down{
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    margin-top: -10%;
+    left: 10%;
+    
+}
+.head-down__btn{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/down.png);
+    transition: 0.5s;
+}
+.head-down__btn:hover {
+    margin-top: 50%;
+}
+.about{
+    width: 100%;
+    font-family: "Proxima Nova", sans-serif;
+}
+
+.about-list{
+    max-width: 1134px;
+    height: 105px;
+    margin: 25px auto;
+}
+.about-list ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.about-list ul li{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: flex-start;
+    display: block;
+    width: 16%;
+}
+.list-num{
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-title);
+    display: block;
+}
+.list-desc{
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-desc);
+    display: block;
+    width: 80%;
+}
+.about-rememb{
+    max-width: 1134px;
+    text-align: left;
+    margin: 15px auto;
+}
+h2.rememb{
+    color: var(--text-title);
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.rememb-block{
+    display: grid;
+    width: 892px;
+    grid-template-columns: 1.5fr 1fr;
+    grid-column-gap: 64px;
+}
+.rememb-text{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-row-gap: 30px;
+    text-align: left;
+}
+.rememb-text__title{
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+}
+.rememb-text_sub{
+    color: var(--text-desc);
+    font-size: 14px;
+    font-weight: 30;
+}
+.relis{
+    width: 100%;
+    margin: 90px 0px;
+}
+.relise-row{
+    max-width: 1134px;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr 308px;
+    grid-row-gap: 25px;
+    margin: 0px auto;
+}
+.relis-title h2{
+    align-self: center;
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--text-title);
+
+}
+.relise-text{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 0fr 1fr 1fr 1fr;
+    grid-row-gap: 35px;
+    grid-column-gap: 30px;
+    grid-template-areas: "tt im"
+    "tdo im"
+    "ta im"
+    "tdt im";
+    align-items: center;
+}
+.relise-text__title{
+    grid-area: tt;
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+}
+.relise-text__desc{
+    font-size: 16px;
+    color: var(--text-desc);
+    font-weight: 300;
+    line-height: 24px;
+}
+.relise-text__artcle{
+    color: #e12457;
+    font-size: 18px;
+    grid-area: ta;
+}
+.relise-text__img{
+    grid-area: im;
+    max-width: 325px;
+    max-height: 370px;
+    outline: 10px solid var(--text-title);
+    justify-self: end;
+}
+.relise-text__img img{
+    transform: translate(-45px, 50px);
+    transition: transform 1.5s;
+}
+.relise-text__img img:hover{
+    transform: translate(0px);
+}
+.relise-prise{
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    background: url(img/bg-prs.jpg) center center border-box no-repeat;
+    display: grid;
+    grid-template-columns: 0.5fr 1.2fr;
+    grid-template-areas: 'rc tl'
+    'rc td'
+    'rc bt';
+    grid-column-gap: 45px;
+    color: var(--text-white);
+    align-items: center;
+}
+.relise-prise__img{
+    grid-area: rc;
+    justify-self: center;
+}
+.relise-prise__img img{
+    transform: translate(25px, -25px);
+}
+.relise-prise__title{
+    font-size: 24px;
+    font-weight: 700;
+    grid-area: tl;
+}
+.relise-prise__desc{
+    font-size: 16px;
+    grid-area: td;
+    font-weight: 300;
+}
+.relise-prise__value{
+    grid-area: bt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.relise-prise__value span:nth-child(1){
+    font-size: 60px;
+}
+.relise-prise__value span:nth-child(2){
+    font-size: 24px;
+    align-self: center;
+}
+.relise-prise__value button{
+    border: none;
+    width: 199px;
+    height: 57px;
+    box-shadow: 0 0 27px rgba(255, 255, 255, 0.48);
+    border-radius: 28px;
+    background-color: #ffffff;
+    color: #c2529a;
+    font-family: "Proxima Nova";
+    font-size: 18px;
+    font-weight: 700;
+}
